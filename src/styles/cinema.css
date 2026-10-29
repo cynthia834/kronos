@@ -1,0 +1,340 @@
+/* ==========================================================================
+   KRONOS // CALIFORNIA - GENESIS CINEMA THEATER SHOWCASE
+   4K Cinematic Dissection & Mechanical Caliber Assembly
+   ========================================================================== */
+
+.cinema-section {
+  padding: 140px 0;
+  position: relative;
+  background: radial-gradient(circle at 50% 40%, rgba(212, 175, 55, 0.05) 0%, transparent 60%);
+  border-bottom: 1px solid var(--border-hairline);
+  transition: opacity 0.5s ease;
+}
+
+.cinema-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Anamorphic Titanium Theater Frame */
+.cinema-theater-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 680px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 40px 100px -20px rgba(0, 0, 0, 0.98),
+    0 0 50px -10px rgba(212, 175, 55, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  margin-bottom: var(--space-xl);
+  transition: all 0.4s var(--ease-mechanical);
+}
+
+.cinema-theater-frame:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 
+    0 50px 120px -20px rgba(0, 0, 0, 1),
+    0 0 70px -10px rgba(212, 175, 55, 0.25);
+}
+
+/* Master Video Element */
+.cinema-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  filter: contrast(1.04) saturate(1.02);
+}
+
+/* Subtle Vignette & Optical Film Scrim */
+.cinema-vignette-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 2;
+}
+
+/* Top HUD Telemetry */
+.cinema-hud-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.cinema-hud-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-gold);
+}
+
+.cinema-hud-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.cinema-live-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #EF4444;
+  box-shadow: 0 0 10px #EF4444;
+  animation: pulse 1.8s infinite;
+}
+
+/* Center Large Play / Pause Overlay */
+.cinema-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(14, 14, 18, 0.65);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  cursor: pointer;
+  z-index: 4;
+  transition: all 0.3s var(--ease-mechanical);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.cinema-play-overlay:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 30px var(--accent-gold-glow);
+}
+
+.cinema-play-overlay.playing {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cinema-theater-frame:hover .cinema-play-overlay.playing {
+  opacity: 0.85;
+  pointer-events: auto;
+}
+
+/* Bottom Glassmorphic Control Dock */
+.cinema-controls-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px 20px;
+  background: linear-gradient(0deg, rgba(7, 7, 10, 0.9) 0%, rgba(7, 7, 10, 0.4) 60%, transparent 100%);
+  backdrop-filter: blur(8px);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+/* Scrubber Timeline */
+.cinema-scrubber-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  transition: height 0.2s ease;
+}
+
+.cinema-scrubber-track:hover {
+  height: 8px;
+}
+
+.cinema-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-gold-dark) 0%, var(--accent-gold) 100%);
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 0 0 12px var(--accent-gold-glow);
+}
+
+.cinema-progress-fill::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cinema-scrubber-track:hover .cinema-progress-fill::after {
+  opacity: 1;
+}
+
+/* Controls Cluster Row */
+.cinema-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cinema-controls-left,
+.cinema-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cinema-ctrl-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.cinema-ctrl-btn:hover {
+  color: var(--accent-gold);
+  transform: scale(1.1);
+}
+
+.cinema-time-readout {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.cinema-time-readout strong {
+  color: var(--text-primary);
+}
+
+/* Horizontal Chapter Navigation Pills */
+.cinema-chapters-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.cinema-chapter-btn {
+  background: var(--color-surface-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cinema-chapter-btn:hover {
+  border-color: var(--border-subtle);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.cinema-chapter-btn.active {
+  border-color: var(--accent-gold);
+  background: rgba(212, 175, 55, 0.08);
+  box-shadow: 0 0 20px -5px var(--accent-gold-glow);
+}
+
+.chapter-btn-time {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: 0.1em;
+}
+
+.chapter-btn-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.chapter-btn-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Theater Dimmer Mode */
+body.cinema-theater-mode .site-header,
+body.cinema-theater-mode .hero-section,
+body.cinema-theater-mode .configurator-section,
+body.cinema-theater-mode .exploded-section,
+body.cinema-theater-mode .watchos-section,
+body.cinema-theater-mode .specs-section,
+body.cinema-theater-mode .site-footer {
+  opacity: 0.12;
+  filter: blur(2px);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+body.cinema-theater-mode .cinema-section {
+  z-index: 1000;
+}
+
+body.cinema-theater-mode .cinema-theater-frame {
+  box-shadow: 
+    0 60px 160px -20px rgba(0, 0, 0, 1),
+    0 0 100px 10px rgba(212, 175, 55, 0.35);
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .cinema-chapters-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cinema-chapters-nav {
+    grid-template-columns: 1fr;
+  }
+  .cinema-theater-frame {
+    aspect-ratio: 16 / 10;
+  }
+}

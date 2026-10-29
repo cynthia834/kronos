@@ -1,0 +1,87 @@
+:root {
+  /* ==========================================================================
+     KRONOS // CALIFORNIA - HAUTE HORLOGERIE DESIGN TOKENS
+     Engineered with ui-ux-pro-max intelligence & frontend-design restraint
+     ========================================================================== */
+
+  /* Surface Colors & Atmospheric Voids */
+  --color-void: #060608;
+  --color-surface-base: #0B0B0F;
+  --color-surface-card: rgba(18, 18, 24, 0.68);
+  --color-surface-card-hover: rgba(26, 26, 36, 0.82);
+  --color-surface-elevated: rgba(30, 30, 42, 0.9);
+  --color-surface-translucent: rgba(255, 255, 255, 0.035);
+
+  /* Aerospace Metals & Precision Alloys */
+  --metal-titanium-raw: #E6E6ED;
+  --metal-titanium-matte: #9B9AA4;
+  --metal-titanium-dark: #22222B;
+  --metal-titanium-bezel: #383745;
+  --metal-titanium-edge: rgba(255, 255, 255, 0.16);
+
+  /* California Sunset & Horology Accents */
+  --accent-gold: #D4AF37;
+  --accent-gold-light: #F2DA88;
+  --accent-gold-deep: #A16207;
+  --accent-gold-glow: rgba(212, 175, 55, 0.18);
+  --accent-amber: #F59E0B;
+  --accent-amber-glow: rgba(245, 158, 11, 0.15);
+
+  /* Biometric Telemetry Accents */
+  --telemetry-emerald: #10B981;
+  --telemetry-emerald-glow: rgba(16, 185, 129, 0.22);
+  --telemetry-cyan: #06B6D4;
+  --telemetry-cyan-glow: rgba(6, 182, 212, 0.22);
+  --telemetry-crimson: #EF4444;
+
+  /* Typography Colors */
+  --text-primary: #F8F8FC;
+  --text-secondary: #A0A0B2;
+  --text-muted: #646477;
+  --text-inverse: #060608;
+
+  /* Hairlines, Borders & Separators */
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.13);
+  --border-highlight: rgba(255, 255, 255, 0.25);
+  --border-gold: rgba(212, 175, 55, 0.35);
+
+  /* Glassmorphic Filters */
+  --glass-blur: blur(28px) saturate(180%);
+  --glass-blur-heavy: blur(40px) saturate(200%);
+  --glass-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.75), 0 18px 36px -18px rgba(0, 0, 0, 0.6);
+  --glow-subtle: 0 0 40px -10px rgba(212, 175, 55, 0.15);
+  --glow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  /* Spatial Scales & Grid */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+  --radius-dial: 50%;
+
+  /* Fluid Typography Scale */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  /* Transitions & Curves */
+  --ease-mechanical: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast: 160ms var(--ease-mechanical);
+  --transition-smooth: 320ms var(--ease-mechanical);
+  --transition-slow: 650ms var(--ease-mechanical);
+}

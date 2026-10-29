@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KRONOS // CALIFORNIA — Haute Horlogerie Smartwatch</title>
+  <meta name="description" content="Designed in Cupertino, California. Forged in Aerospace Grade 5 Titanium. The $100k agency-tier smartwatch combining bespoke mechanical watchmaking with neural intelligence.">
+  
+  <!-- Modern Typography Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <!-- Ambient Subtle Grid -->
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       FLOATING DYNAMIC ISLAND NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav-island" aria-label="Main Navigation">
+      <a href="#hero" class="brand-mark" aria-label="KRONOS Home">
+        <svg class="brand-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 3"/>
+          <circle cx="12" cy="3" r="1" fill="currentColor"/>
+          <circle cx="12" cy="21" r="1" fill="currentColor"/>
+        </svg>
+        <span>KRONOS</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#studio" class="nav-link">STUDIO 360°</a></li>
+        <li><a href="#architecture" class="nav-link">DISSECTION</a></li>
+        <li><a href="#watchos" class="nav-link">WATCHOS</a></li>
+        <li><a href="#metallurgy" class="nav-link">METALLURGY</a></li>
+      </ul>
+
+      <div class="nav-meta-cluster">
+        <div class="california-badge" title="Cupertino, California Live Local Time">
+          <span class="pulse-dot"></span>
+          <span>CA: <strong data-live-california-time>--:--:--</strong></span>
+        </div>
+
+        <button id="nav-vip-status-btn" class="nav-vip-badge" data-open-vip-login title="VIP Client Authentication & Ushering Portal">
+          <span class="pulse-dot"></span>
+          <span>VIP CLIENT LOGIN</span>
+        </button>
+
+        <button id="audio-toggle-btn" class="audio-toggle-btn" aria-label="Toggle Mechanical Audio Feedback" title="Toggle Mechanical Acoustic Detents">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <button class="btn btn-primary" data-open-concierge style="padding: 8px 18px; font-size: 11px;">
+          RESERVE
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ── FULL-BLEED FIXED VIDEO ENVIRONMENT (Stays static as user scrolls) ── -->
+    <div class="hero-env" id="hero-env">
+      <!-- The video IS the page backdrop. Actively plays and completes simultaneously with scroll. -->
+      <video id="hero-cinematic-video" class="hero-env-video" src="/kronos-cinematic.mp4" autoplay muted playsinline preload="auto"></video>
+
+      <!-- Multi-directional organic dissolve mask — fades edges into void -->
+      <div class="hero-env-dissolve" aria-hidden="true"></div>
+
+      <!-- Atmospheric grain overlay — makes video feel printed into the page -->
+      <div class="hero-env-grain" aria-hidden="true"></div>
+
+      <!-- Floating ambient light bloom synced to video warmth -->
+      <div class="hero-env-bloom" aria-hidden="true"></div>
+    </div>
+
+    <!-- ======================================================================
+         CINEMATIC HERO SECTION
+         ====================================================================== -->
+    <section id="hero" class="hero-section" aria-label="Hero Showcase">
+
+      <!-- ── ALL CONTENT ANCHORED BOTTOM-LEFT — video center stays clear ── -->
+      <div class="hero-float-layer">
+        <div class="container">
+          <div class="hero-bottom-left">
+
+            <!-- Top eyebrow chip -->
+            <div class="hero-origin-chip">
+              <span class="pulse-dot"></span>
+              <span>CUPERTINO, CALIFORNIA // Ti-6Al-4V GRADE 5</span>
+            </div>
+
+            <!-- Compact title —  bottom left, doesn't cover video -->
+            <h1 class="hero-float-title">The Haute<br><span class="text-gradient-gold">Horlogerie</span> Smartwatch.</h1>
+
+            <!-- Very short sub-line -->
+            <p class="hero-float-subtitle">
+              Aerospace titanium. 0.002mm tolerances. California neural telemetry.
+            </p>
+
+            <!-- CTAs -->
+            <div class="hero-float-ctas">
+              <a href="#studio" class="btn btn-primary">
+                CONFIGURE YOUR PIECE
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button class="btn btn-glass" data-open-vip-login>
+                VIP SHOWROOM
+              </button>
+            </div>
+
+            <!-- Mode toggle strip -->
+            <div class="hero-mode-strip">
+              <button id="btn-show-video" class="hero-mode-dot active" title="4K Caliber Assembly Video">
+                <span class="hero-mode-dot-pip"></span>
+                <span>4K CALIBER</span>
+              </button>
+              <div class="hero-mode-divider"></div>
+              <button id="btn-show-dial" class="hero-mode-dot" title="Interactive 60fps Dial">
+                <span class="hero-mode-dot-pip"></span>
+                <span>LIVE DIAL</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ── INTERACTIVE DIAL (hidden by default, slides up over the env) ── -->
+      <div id="hero-canvas-container" class="hero-canvas-container" style="display: none;">
+        <div class="watch-apparatus-wrapper">
+          <div id="watch-strap-top" class="watch-strap-segment top" aria-hidden="true"></div>
+          <div id="watch-hardware-chassis" class="watch-case-chassis" title="Click case or rotate crown for haptic feedback">
+            <div id="watch-crown-hardware" class="watch-crown-element" title="Interactive Crown Detent"></div>
+            <canvas id="hero-watch-canvas" class="watch-canvas-screen" width="360" height="360" aria-label="KRONOS Real-time 60fps Chronograph Watch Dial"></canvas>
+          </div>
+          <div id="watch-strap-bottom" class="watch-strap-segment bottom" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- ── SPEC TICKER — anchored bottom above the fold line ── -->
+      <div class="hero-spec-anchor">
+        <div class="container">
+          <div class="hero-specs-ticker">
+            <div class="spec-ticker-item">
+              <span class="spec-item-num">Ti-6Al-4V</span>
+              <span class="spec-item-label">Grade 5 Titanium</span>
+            </div>
+            <div class="spec-ticker-item">
+              <span class="spec-item-num">100M</span>
+              <span class="spec-item-label">ISO 6425 Dive Rated</span>
+            </div>
+            <div class="spec-ticker-item">
+              <span class="spec-item-num">72 HRS</span>
+              <span class="spec-item-label">Continuous ECG Telemetry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         360° ATELIER STUDIO CONFIGURATOR
+         ====================================================================== -->
+    <section id="studio" class="configurator-section" aria-label="360 Degree Custom Studio">
+      <div class="container">
+        <div class="section-header-centered">
+          <div class="eyebrow">BESPOKE HARDWARE WORKSHOP</div>
+          <h2 class="section-title">Configure Your <span class="text-gradient-titanium">Bespoke KRONOS</span></h2>
+          <p class="section-lead">Select your aerospace chassis finish, hand-stitched strap materials, and dial complications in real time.</p>
+        </div>
+
+        <div class="configurator-workspace">
+          <!-- Live Preview Visualizer -->
+          <div class="config-visualizer-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(14, 14, 18, 0.6); padding: 40px; border-radius: var(--radius-xl); border: 1px solid var(--border-hairline);">
+            <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-bottom: 20px; letter-spacing: 0.1em;">
+              STUDIO TELEMETRY // SPEC NO. CA-2026-X
+            </div>
+
+            <div style="display: flex; gap: 24px; margin-top: 24px; text-align: center;">
+              <div>
+                <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Chassis</div>
+                <div id="config-case-name" style="font-size: 14px; font-weight: 600; color: var(--accent-gold);">Natural Brushed Titanium</div>
+              </div>
+              <div style="border-left: 1px solid var(--border-hairline); padding-left: 24px;">
+                <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Strap Material</div>
+                <div id="config-strap-name" style="font-size: 14px; font-weight: 600; color: var(--text-primary);">Deep-Sea Fluoroelastomer</div>
+              </div>
+              <div style="border-left: 1px solid var(--border-hairline); padding-left: 24px;">
+                <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Complication</div>
+                <div id="config-dial-name" style="font-size: 14px; font-weight: 600; color: var(--text-primary);">California Dial</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Panel -->
+          <div class="configurator-controls-panel">
+            <!-- Group 1: Case Metal -->
+            <div class="config-group">
+              <div class="config-group-header">
+                <span class="config-group-title">1. Chassis Metallurgy</span>
+                <span class="config-group-selected">Grade 5 Aerospace Alloy</span>
+              </div>
+              <div class="options-pill-grid">
+                <button class="option-select-btn active" data-case-option="raw-titanium">
+                  <span class="option-btn-title">Raw Titanium</span>
+                  <span class="option-btn-sub">Natural Brush • $1,850</span>
+                </button>
+                <button class="option-select-btn" data-case-option="space-obsidian">
+                  <span class="option-btn-title">Space Obsidian</span>
+                  <span class="option-btn-sub">DLC Vapor • $2,050</span>
+                </button>
+                <button class="option-select-btn" data-case-option="california-gold">
+                  <span class="option-btn-title">California Gold</span>
+                  <span class="option-btn-sub">18K PVD • $2,300</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Group 2: Strap Materials -->
+            <div class="config-group">
+              <div class="config-group-header">
+                <span class="config-group-title">2. Strap & Buckle Architecture</span>
+                <span class="config-group-selected">Quick-Release Hermetic Lugs</span>
+              </div>
+              <div class="options-pill-grid">
+                <button class="option-select-btn active" data-strap-option="ocean-fluoro">
+                  <span class="option-btn-title">Deep-Sea Fluoro</span>
+                  <span class="option-btn-sub">Ribbed • Included</span>
+                </button>
+                <button class="option-select-btn" data-strap-option="saddle-leather">
+                  <span class="option-btn-title">Saddle Leather</span>
+                  <span class="option-btn-sub">Sonoma Hide • +$150</span>
+                </button>
+                <button class="option-select-btn" data-strap-option="milanese-mesh">
+                  <span class="option-btn-title">Milanese Mesh</span>
+                  <span class="option-btn-sub">Titanium • +$250</span>
+                </button>
+                <button class="option-select-btn" data-strap-option="alpine-loop">
+                  <span class="option-btn-title">Sierra Alpine</span>
+                  <span class="option-btn-sub">G-Hook • +$120</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Group 3: Dial Face Horology -->
+            <div class="config-group">
+              <div class="config-group-header">
+                <span class="config-group-title">3. Dial Complications</span>
+                <span class="config-group-selected">60Hz Smooth Vector Sweep</span>
+              </div>
+              <div class="options-pill-grid">
+                <button class="option-select-btn active" data-dial-option="california">
+                  <span class="option-btn-title">California Dial</span>
+                  <span class="option-btn-sub">Mixed Numerals</span>
+                </button>
+                <button class="option-select-btn" data-dial-option="chronograph">
+                  <span class="option-btn-title">Chronograph</span>
+                  <span class="option-btn-sub">Tachymeter Scale</span>
+                </button>
+                <button class="option-select-btn" data-dial-option="stealth">
+                  <span class="option-btn-title">Obsidian Minimal</span>
+                  <span class="option-btn-sub">Solar Tracking</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Price & Order Bar -->
+            <div class="config-price-bar">
+              <div>
+                <div class="config-total-label">Atelier Build Total</div>
+                <div id="config-price-display" class="config-total-amount">$1,850</div>
+              </div>
+              <button class="btn btn-primary" data-open-concierge>
+                RESERVE BUILD
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EXPLODED HARDWARE ARCHITECTURE DISSECTION
+         ====================================================================== -->
+    <section id="architecture" class="exploded-section" aria-label="Exploded Hardware Dissection">
+      <div class="container">
+        <div class="section-header-centered">
+          <div class="eyebrow">PRECISION OPTICAL DISASSEMBLY</div>
+          <h2 class="section-title">The Anatomy of <span class="text-gradient-gold">Zero Compromise</span></h2>
+          <p class="section-lead">Drag the separation dial or hover each component to inspect the six precision-machined layers engineered within the 11.2mm monobloc chassis.</p>
+        </div>
+
+        <!-- Dissection Slider Control -->
+        <div class="exploded-control-bar">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">ASSEMBLED</span>
+          <input type="range" id="exploded-slider" class="exploded-range-slider" min="0" max="100" value="50" aria-label="Explode hardware layers slider">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-gold);">DISASSEMBLED (<span id="exploded-depth-display">21.3 mm</span>)</span>
+        </div>
+
+        <!-- 3D Perspective Stage -->
+        <div id="exploded-hardware-stage" class="exploded-stage-container">
+          <div class="exploded-stage-inner">
+            <!-- Layer 1: Sapphire Crystal -->
+            <div class="exploded-layer-plate layer-sapphire" data-exploded-layer="1" title="Tier 1: Double-Domed Sapphire Crystal">
+              <span style="font-family: var(--font-mono); font-size: 9px; color: rgba(255,255,255,0.7);">9 MOHS SAPPHIRE</span>
+            </div>
+
+            <!-- Layer 2: MicroLED Display -->
+            <div class="exploded-layer-plate layer-display" data-exploded-layer="2" title="Tier 2: 3,000-Nit Ultra-Retina MicroLED">
+              <div class="layer-display-inner">3,000 NITS MICRO-LED</div>
+            </div>
+
+            <!-- Layer 3: K1 Neural Engine -->
+            <div class="exploded-layer-plate layer-processor" data-exploded-layer="3" title="Tier 3: K1 California Neural Engine">
+              <div class="processor-chip-core">
+                <span style="font-weight: 700;">K1 NEURAL</span>
+                <span style="font-size: 8px; color: var(--text-muted);">16-CORE NPU</span>
+              </div>
+            </div>
+
+            <!-- Layer 4: Battery -->
+            <div class="exploded-layer-plate layer-battery" data-exploded-layer="4" title="Tier 4: Solid-State Electrolyte Battery">
+              <span style="font-family: var(--font-mono); font-size: 9px; color: #8E8D94;">540mAh SOLID STATE</span>
+            </div>
+
+            <!-- Layer 5: Titanium Chassis -->
+            <div class="exploded-layer-plate layer-chassis" data-exploded-layer="5" title="Tier 5: Grade 5 Titanium Monobloc Chassis">
+              <span style="font-family: var(--font-mono); font-size: 9px; font-weight: 700; color: #111;">TI-6AL-4V BILLET</span>
+            </div>
+
+            <!-- Layer 6: PPG Sensor Ring -->
+            <div class="exploded-layer-plate layer-sensors" data-exploded-layer="6" title="Tier 6: Hexagonal PPG Biometric Optical Ring">
+              <div class="sensor-optic-ring">
+                <div class="optic-node"></div>
+                <div class="optic-node"></div>
+                <div class="optic-node"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer Inspection Cards Grid -->
+        <div class="exploded-inspect-cards">
+          <article class="inspect-card" data-inspect-card="1">
+            <div class="inspect-card-tier">LAYER 01 // OPTICS</div>
+            <h3 class="inspect-card-title">Double-Domed Sapphire Crystal</h3>
+            <p class="inspect-card-desc">Synthetic corundum with hardness rating 9 on the Mohs scale. Dual-sided vacuum anti-reflective treatment eliminating 99.4% of optical surface glare.</p>
+          </article>
+
+          <article class="inspect-card" data-inspect-card="2">
+            <div class="inspect-card-tier">LAYER 02 // VISUAL ARRAY</div>
+            <h3 class="inspect-card-title">3,000-Nit Ultra-Retina MicroLED</h3>
+            <p class="inspect-card-desc">410 pixels per inch with 100% DCI-P3 color gamut coverage. Dynamic variable refresh rate from 1Hz always-on to 120Hz smooth kinetic sweeping.</p>
+          </article>
+
+          <article class="inspect-card" data-inspect-card="3">
+            <div class="inspect-card-tier">LAYER 03 // SILICON</div>
+            <h3 class="inspect-card-title">K1 California Neural Architecture</h3>
+            <p class="inspect-card-desc">Designed in Cupertino. 3nm System-in-Package featuring dedicated biometric co-processors running continuous local neural sleep and cardiac telemetry.</p>
+          </article>
+
+          <article class="inspect-card" data-inspect-card="4">
+            <div class="inspect-card-tier">LAYER 04 // POWER CELL</div>
+            <h3 class="inspect-card-title">Solid-State Electrolyte Battery</h3>
+            <p class="inspect-card-desc">Breakthrough 540mAh energy density cell providing 72 hours of unthrottled performance with fast induction charging (0 to 80% in 28 minutes).</p>
+          </article>
+
+          <article class="inspect-card" data-inspect-card="5">
+            <div class="inspect-card-tier">LAYER 05 // METALLURGY</div>
+            <h3 class="inspect-card-title">Grade 5 Titanium Monobloc Chassis</h3>
+            <p class="inspect-card-desc">Precision CNC-milled from a single block of Ti-6Al-4V aerospace alloy. Twice the tensile strength of aluminum at half the weight of surgical steel.</p>
+          </article>
+
+          <article class="inspect-card" data-inspect-card="6">
+            <div class="inspect-card-tier">LAYER 06 // BIOMETRICS</div>
+            <h3 class="inspect-card-title">Hexagonal PPG Optical Ring</h3>
+            <p class="inspect-card-desc">8-photodiode optical cluster emitting green, red, and infrared wavelengths for clinical-grade ECG recording, blood oxygen saturation, and autonomic recovery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         LIVING WATCHOS TOUCH SIMULATOR
+         ====================================================================== -->
+    <section id="watchos" class="watchos-section" aria-label="Living WatchOS Experience">
+      <div class="container">
+        <div class="section-header-centered">
+          <div class="eyebrow">NEURAL OPERATING SYSTEM</div>
+          <h2 class="section-title">Experience <span class="text-gradient-gold">WatchOS // Horizon</span></h2>
+          <p class="section-lead">Interact with the working on-wrist simulator. Switch complications below or drag the digital crown to rotate telemetry modes.</p>
+        </div>
+
+        <div class="os-simulator-container">
+          <!-- Touchscreen Mockup Device -->
+          <div id="watchos-simulator" class="os-mockup-frame">
+            <div id="sim-digital-crown" class="sim-crown" title="Drag crown up or down to cycle complications"></div>
+
+            <!-- Screen 1: California Solar Dial -->
+            <div class="os-screen-item active" data-os-screen="solar">
+              <div style="font-family: var(--font-mono); font-size: 10px; color: var(--accent-gold); letter-spacing: 0.1em; margin-bottom: 6px;">
+                CUPERTINO // 37.33° N
+              </div>
+              <div class="os-time-badge" data-live-california-time>16:42:08</div>
+              <div class="os-sub-metric">GOLDEN HOUR IN: 1H 24M</div>
+              
+              <div style="width: 140px; height: 40px; border-bottom: 2px solid var(--accent-gold); position: relative; margin: 10px 0;">
+                <div style="width: 12px; height: 12px; border-radius: 50%; background: #F59E0B; position: absolute; left: 65%; bottom: -6px; box-shadow: 0 0 12px #F59E0B;"></div>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 9px; color: var(--text-muted);">UV INDEX 3 (MODERATE) • 74°F</div>
+            </div>
+
+            <!-- Screen 2: Cardiac Telemetry (Live ECG) -->
+            <div class="os-screen-item" data-os-screen="ecg">
+              <div style="display: flex; justify-content: space-between; width: 100%; font-family: var(--font-mono); font-size: 10px; color: #10B981; margin-bottom: 4px;">
+                <span>CARDIAC LEAD I</span>
+                <span>SINUS RHYTHM</span>
+              </div>
+              <div style="display: flex; align-items: baseline; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 2.4rem; font-weight: 700; color: #FFFFFF;">72</span>
+                <span style="font-size: 12px; color: #10B981;">BPM</span>
+              </div>
+              <canvas id="ecg-waveform-canvas" width="240" height="90" style="width: 240px; height: 90px; margin: 6px 0;"></canvas>
+              <div style="display: flex; justify-content: space-around; width: 100%; font-family: var(--font-mono); font-size: 10px; color: var(--text-secondary);">
+                <span>SpO2: <strong style="color: #FFF;">99%</strong></span>
+                <span>HRV: <strong style="color: #FFF;">64 ms</strong></span>
+              </div>
+            </div>
+
+            <!-- Screen 3: Mountain Waypoint Compass -->
+            <div class="os-screen-item" data-os-screen="compass">
+              <div style="font-family: var(--font-mono); font-size: 10px; color: #06B6D4; letter-spacing: 0.1em; margin-bottom: 4px;">
+                HIGH SIERRA WAYPOINT
+              </div>
+              <div style="width: 130px; height: 130px; border-radius: 50%; border: 1px dashed rgba(6, 182, 212, 0.4); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+                <div style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 700; color: #FFF;">312° NW</div>
+                <div style="font-size: 10px; color: var(--text-muted);">ELEVATION</div>
+                <div style="font-family: var(--font-mono); font-size: 12px; color: #06B6D4; font-weight: 600;">1,420 FT</div>
+                <div style="position: absolute; top: 6px; width: 4px; height: 12px; background: #EF4444; border-radius: 2px;"></div>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); margin-top: 8px;">BAROMETRIC: 1013.2 hPa • DUAL-GPS</div>
+            </div>
+          </div>
+
+          <!-- Complications Navigation Menu -->
+          <div class="os-nav-tabs">
+            <button class="os-nav-tab-btn active" data-os-nav="solar">
+              <div>
+                <div class="tab-btn-title">California Solar Dial</div>
+                <div class="tab-btn-desc">Real-time solar azimuth, horizon tracking, and sunset countdown</div>
+              </div>
+              <span class="text-gold">→</span>
+            </button>
+
+            <button class="os-nav-tab-btn" data-os-nav="ecg">
+              <div>
+                <div class="tab-btn-title">Cardiac Lead I Telemetry</div>
+                <div class="tab-btn-desc">Live waveform ECG, resting autonomic HRV, and optical blood oxygen</div>
+              </div>
+              <span class="text-gold">→</span>
+            </button>
+
+            <button class="os-nav-tab-btn" data-os-nav="compass">
+              <div>
+                <div class="tab-btn-title">Sierra Waypoint Compass</div>
+                <div class="tab-btn-desc">Dual-frequency L1/L5 satellite guidance with barometric altimeter</div>
+              </div>
+              <span class="text-gold">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         METALLURGY & SPEC COMPARISON TABLE
+         ====================================================================== -->
+    <section id="metallurgy" class="specs-section" aria-label="Horological Spec Comparison">
+      <div class="container">
+        <div class="section-header-centered">
+          <div class="eyebrow">ENGINEERING BENCHMARK</div>
+          <h2 class="section-title">The Standard of <span class="text-gradient-titanium">California Horology</span></h2>
+          <p class="section-lead">A side-by-side technical evaluation against traditional Swiss mechanical timepieces and consumer smartwatches.</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>ATTRIBUTE</th>
+                <th>KRONOS // CALIFORNIA</th>
+                <th>TRADITIONAL SWISS MECHANICAL</th>
+                <th>MASS CONSUMER SMARTWATCH</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Case Metallurgy</td>
+                <td>Aerospace Grade 5 Titanium (Ti-6Al-4V)</td>
+                <td>316L Stainless Steel or Gold</td>
+                <td>Recycled Cast Aluminum or Plastic</td>
+              </tr>
+              <tr>
+                <td>Crystal Glass</td>
+                <td>Double-Domed Sapphire (Mohs 9)</td>
+                <td>Flat Sapphire (Mohs 9)</td>
+                <td>Chemically Strengthened Glass (Mohs 5-6)</td>
+              </tr>
+              <tr>
+                <td>Movement Accuracy</td>
+                <td>Sub-microsecond GPS Atomic Sync</td>
+                <td>-4 to +6 seconds / day (COSC)</td>
+                <td>Standard Bluetooth Sync</td>
+              </tr>
+              <tr>
+                <td>Biometric Monitoring</td>
+                <td>Continuous 8-Diode ECG, SpO2 & HRV</td>
+                <td>None</td>
+                <td>Basic 4-diode optical cluster</td>
+              </tr>
+              <tr>
+                <td>Water Resistance</td>
+                <td>100M (ISO 6425 Deep Ocean)</td>
+                <td>30M - 100M (Dependent on model)</td>
+                <td>50M (Splash / Surface swimming)</td>
+              </tr>
+              <tr>
+                <td>Provenance</td>
+                <td>Engineered in Cupertino, California</td>
+                <td>Geneva / Le Locle, Switzerland</td>
+                <td>Mass Factory Assembly Lines</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       VIP CONCIERGE PRE-ORDER MODAL DRAWER
+       ======================================================================== -->
+  <div id="concierge-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card-drawer">
+      <button class="modal-close-btn" data-close-concierge aria-label="Close Concierge Modal">✕</button>
+
+      <!-- State 1: Order Reservation Form -->
+      <div id="concierge-order-state">
+        <div class="eyebrow">VIP ATELIER RESERVATION</div>
+        <h2 id="modal-title" style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 8px;">
+          Commission Your <span class="text-gradient-gold">KRONOS Timepiece</span>
+        </h2>
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">
+          Strictly limited to 1,000 individually numbered pieces for the 2026 California Founders Edition.
+        </p>
+
+        <!-- Monogram Laser Engraving Preview -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-hairline); border-radius: var(--radius-md); padding: 20px; text-align: center; margin-bottom: 24px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-gold); text-transform: uppercase;">
+            LASER ENGRAVED CASEBACK MONOGRAM
+          </div>
+          
+          <div class="caseback-engrave-display">
+            <span id="caseback-serial-number" class="caseback-serial">NO. 0342 / 1000</span>
+            <span id="caseback-monogram-text" class="caseback-monogram">CAL</span>
+            <span class="caseback-serial">CUPERTINO • TI-GRADE 5</span>
+          </div>
+
+          <div style="max-width: 240px; margin: 0 auto;">
+            <label for="engrave-monogram-input" class="form-label" style="text-align: center;">Personal Initials (1-3 Letters)</label>
+            <input type="text" id="engrave-monogram-input" class="form-input" style="text-align: center; font-family: var(--font-mono); letter-spacing: 0.2em; font-weight: 700;" maxlength="3" value="CAL" placeholder="ABC">
+          </div>
+        </div>
+
+        <!-- Selected Build Recap -->
+        <div style="background: rgba(0, 0, 0, 0.4); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 24px; font-size: 13px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: var(--text-muted);">Chassis:</span>
+            <strong id="drawer-summary-case" style="color: var(--text-primary);">Natural Brushed Titanium</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span style="color: var(--text-muted);">Strap Architecture:</span>
+            <strong id="drawer-summary-strap" style="color: var(--text-primary);">Deep-Sea Fluoroelastomer</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+            <span style="color: var(--text-muted);">Complication:</span>
+            <strong id="drawer-summary-dial" style="color: var(--text-primary);">California Dial</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-hairline); padding-top: 10px;">
+            <span style="font-family: var(--font-mono); font-weight: 600;">TOTAL ALLOCATION:</span>
+            <strong id="drawer-summary-total" style="font-family: var(--font-mono); font-size: 16px; color: var(--accent-gold);">$1,850 USD</strong>
+          </div>
+        </div>
+
+        <!-- Reservation Form -->
+        <form id="concierge-order-form">
+          <div class="form-group">
+            <label class="form-label" for="concierge-name">Full Name</label>
+            <input type="text" id="concierge-name" class="form-input" required placeholder="Alexander Vance">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="concierge-email">VIP Contact Email</label>
+            <input type="email" id="concierge-email" class="form-input" required placeholder="vance@atelier-silicon.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="concierge-shipping">Delivery Region</label>
+            <select id="concierge-shipping" class="form-input" style="background: #14141A;">
+              <option>California Priority White Glove (San Francisco / Los Angeles / Silicon Valley)</option>
+              <option>United States Domestic Express Courier</option>
+              <option>International Concierge Direct Air Courier</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px; padding: 16px;">
+            CONFIRM ATELIER RESERVATION
+          </button>
+        </form>
+      </div>
+
+      <!-- State 2: Confirmation Receipt -->
+      <div id="concierge-success-state" style="display: none; text-align: center; padding: 40px 20px;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 1px solid #10B981; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #10B981; font-size: 28px;">
+          ✓
+        </div>
+        <div class="eyebrow">TIMEPIECE ALLOCATED</div>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 12px;">
+          Welcome to the <span class="text-gradient-gold">KRONOS Atelier</span>
+        </h2>
+        <p style="font-size: 14px; color: var(--text-secondary); max-width: 440px; margin: 0 auto 24px; line-height: 1.6;">
+          Your custom timepiece specification has been securely filed. A California horological concierge will reach out via encrypted communication to finalize your custom serial allocation and presentation chest delivery.
+        </p>
+        <button class="btn btn-secondary" data-close-concierge>
+          RETURN TO SHOWROOM
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       VIP CLIENT LOGIN DIALOG MODAL
+       ======================================================================== -->
+  <div id="vip-login-modal" class="vip-login-backdrop" role="dialog" aria-modal="true" aria-labelledby="vip-login-title">
+    <div class="vip-login-card">
+      <button class="vip-login-close" data-close-vip-login aria-label="Close Login Modal">✕</button>
+
+      <div class="vip-icon-shield">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+      </div>
+
+      <div class="eyebrow" style="margin-bottom: 8px;">CALIFORNIA ATELIER ACCESS</div>
+      <h2 id="vip-login-title" style="font-family: var(--font-display); font-size: 2.1rem; margin-bottom: 8px;">
+        VIP Client <span class="text-gradient-gold">Login</span>
+      </h2>
+      <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+        Authenticate to initialize the KRONOS caliber assembly and commence cinematic ushering into the private showroom.
+      </p>
+
+      <form id="vip-login-form">
+        <input type="text" id="vip-passkey-input" class="vip-passcode-input" value="CAL-2026-VIP" placeholder="ENTER VIP PASSKEY" required autocomplete="off" spellcheck="false">
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; margin-bottom: 10px;">
+          AUTHENTICATE & COMMENCE USHERING
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <button type="button" id="vip-biometric-btn" class="btn btn-secondary" style="width: 100%; padding: 12px; font-size: 11px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11v.5"></path></svg>
+          BIOMETRIC 1-CLICK AUTH
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FULL-SCREEN CINEMATIC USHERING GATEWAY PORTAL
+       (Ushers client directly into the showroom via video assembly)
+       ======================================================================== -->
+  <div id="ushering-portal" class="ushering-portal" aria-label="KRONOS Cinematic Ushering Portal">
+    <!-- Seamless Edge-to-Edge Caliber Assembly Video -->
+    <video id="ushering-video" class="ushering-video-canvas" src="/kronos-cinematic.mp4" playsinline preload="auto"></video>
+    
+    <!-- Optical Scrim -->
+    <div class="ushering-optical-scrim"></div>
+
+    <!-- Top Telemetry Header -->
+    <div class="ushering-hud-top">
+      <div class="ushering-status-pill">
+        <span class="pulse-dot"></span>
+        <span>TELEMETRY SYNCHRONIZATION // ATELIER USHERING</span>
+      </div>
+
+      <button id="ushering-skip-btn" class="ushering-skip-btn">
+        ENTER SHOWROOM DIRECTLY [ESC] →
+      </button>
+    </div>
+
+    <!-- Center Dynamic Synchronized Typography Stage -->
+    <div id="ushering-center-stage" class="ushering-center-stage">
+      <span id="ushering-eyebrow" class="ushering-phase-eyebrow">PHASE 01 // DISASSEMBLY MATRIX</span>
+      <h1 id="ushering-title" class="ushering-phase-title">Aerospace Dissection</h1>
+      <p id="ushering-subtitle" class="ushering-phase-subtitle">Deconstructing the 6 optical layers and K1 neural silicon.</p>
+    </div>
+
+    <!-- Bottom Telemetry HUD & Progress Line -->
+    <div class="ushering-bottom-hud">
+      <div class="ushering-progress-track">
+        <div id="ushering-progress-bar" class="ushering-progress-bar"></div>
+      </div>
+
+      <div class="ushering-bottom-meta">
+        <span>KRONOS // CUPERTINO 37.33° N</span>
+        <span style="color: var(--accent-gold); font-weight: 600;">CALIBER USHERING SEQUENCE ACTIVE</span>
+        <span>SECURITY PROTOCOL 256-BIT</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-content">
+      <div class="footer-brand-statement">
+        <span style="font-weight: 700; letter-spacing: 0.1em; color: var(--text-primary);">KRONOS TIMEPIECES INC.</span>
+        <div>Designed in Cupertino, California • Forged in Grade 5 Aerospace Titanium</div>
+      </div>
+
+      <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); display: flex; gap: 20px;">
+        <span>37°20'05"N 122°00'32"W</span>
+        <span>PATENTED NEURAL HOROLOGY</span>
+        <span>© 2026 ALL RIGHTS RESERVED</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
